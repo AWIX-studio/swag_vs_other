@@ -1,0 +1,99 @@
+[gd_scene load_steps=7 format=3 uid="uid://d362e37i7gs2p"]
+
+[ext_resource type="Texture2D" uid="uid://bo6iggwnila74" path="res://Scenes/mainMenu/Resouces/Selector_main_background.png" id="1_1tc1t"]
+[ext_resource type="Texture2D" uid="uid://ddttrdmy8cf5f" path="res://Scenes/mainMenu/Resouces/pngwing.com(1).png" id="2_mn338"]
+[ext_resource type="Texture2D" uid="uid://ckyjy0iel8vuc" path="res://Scenes/mainMenu/Resouces/Screenshot From 2025-07-16 21-01-53.png" id="3_r6kr6"]
+[ext_resource type="Texture2D" uid="uid://ck1dwwar51ygi" path="res://Scenes/mainMenu/Resouces/other-logo-73-5548.png" id="4_bn68f"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mn338"]
+bg_color = Color(1, 1, 1, 1)
+shadow_color = Color(0.232153, 1.97817e-05, 0.212062, 0.6)
+shadow_size = 25
+shadow_offset = Vector2(4.045, 0)
+anti_aliasing_size = 0.495
+
+[sub_resource type="Theme" id="Theme_mxh6u"]
+Button/colors/font_color = Color(0, 0, 0, 1)
+Button/colors/font_outline_color = Color(1, 0.59534, 0.921973, 1)
+Button/constants/outline_size = 10
+Button/styles/normal = SubResource("StyleBoxFlat_mn338")
+
+[node name="Screen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(576, 324)
+scale = Vector2(1.125, 0.84375)
+texture = ExtResource("1_1tc1t")
+
+[node name="ButtonContainer" type="BoxContainer" parent="."]
+layout_mode = 0
+offset_left = 634.0
+offset_top = 101.0
+offset_right = 939.0
+offset_bottom = 439.0
+rotation = 0.0036614
+
+[node name="VerticalContainer" type="VBoxContainer" parent="ButtonContainer"]
+layout_mode = 2
+theme = SubResource("Theme_mxh6u")
+
+[node name="StartButton" type="Button" parent="ButtonContainer/VerticalContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 80
+text = "Start"
+
+[node name="OptionsButton" type="Button" parent="ButtonContainer/VerticalContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 80
+text = "Options"
+
+[node name="ExitButton" type="Button" parent="ButtonContainer/VerticalContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 80
+text = "Exit"
+
+[node name="SC" type="Sprite2D" parent="."]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(85, 442)
+scale = Vector2(0.360001, 0.279999)
+texture = ExtResource("2_mn338")
+
+[node name="SC2" type="Sprite2D" parent="."]
+position = Vector2(94, 430)
+scale = Vector2(0.360001, 0.279999)
+texture = ExtResource("2_mn338")
+
+[node name="Logo" type="Control" parent="."]
+anchors_preset = 0
+
+[node name="Swag" type="Sprite2D" parent="Logo"]
+position = Vector2(118, 116)
+scale = Vector2(1.58, 1.58)
+texture = ExtResource("3_r6kr6")
+
+[node name="Other-logo-73-5548" type="Sprite2D" parent="Logo"]
+position = Vector2(331, 140)
+scale = Vector2(0.199076, 0.490053)
+texture = ExtResource("4_bn68f")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Logo"]
+layout_mode = 0
+offset_left = 193.0
+offset_top = 94.0
+offset_right = 308.0
+offset_bottom = 185.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_constants/shadow_offset_y = 5
+theme_override_constants/shadow_offset_x = 5
+theme_override_constants/shadow_outline_size = 25
+theme_override_font_sizes/normal_font_size = 56
+text = "VS"
