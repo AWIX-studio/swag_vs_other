@@ -1,6 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://d362e37i7gs2p"]
+[gd_scene load_steps=9 format=3 uid="uid://d362e37i7gs2p"]
 
 [ext_resource type="Texture2D" uid="uid://bo6iggwnila74" path="res://Scenes/mainMenu/Resouces/Selector_main_background.png" id="1_1tc1t"]
+[ext_resource type="Script" uid="uid://dt88jovud6tc7" path="res://Scenes/mainMenu/main_menu.gd" id="1_1wekb"]
 [ext_resource type="Texture2D" uid="uid://ddttrdmy8cf5f" path="res://Scenes/mainMenu/Resouces/pngwing.com(1).png" id="2_mn338"]
 [ext_resource type="Texture2D" uid="uid://ckyjy0iel8vuc" path="res://Scenes/mainMenu/Resouces/Screenshot From 2025-07-16 21-01-53.png" id="3_r6kr6"]
 [ext_resource type="Texture2D" uid="uid://ck1dwwar51ygi" path="res://Scenes/mainMenu/Resouces/other-logo-73-5548.png" id="4_bn68f"]
@@ -26,6 +27,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_1wekb")
 
 [node name="Background" type="Sprite2D" parent="."]
 position = Vector2(576, 324)
@@ -103,3 +105,5 @@ text = "VS"
 stream = ExtResource("5_bn68f")
 autoplay = true
 parameters/looping = true
+
+[connection signal="button_down" from="ButtonContainer/VerticalContainer/ExitButton" to="." method="_on_exit_button_button_down"]
